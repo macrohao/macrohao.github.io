@@ -66,7 +66,7 @@
 		</nav>
 
 		<nav>
-        总文章数 76
+        总文章数 41
     </nav>
 
 		<nav class="header-smart-menu">
@@ -168,23 +168,27 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-1037 在霍格沃茨找零钱 (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1069 The Black Hole of Numbers (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1037-在霍格沃茨找零钱-20-分"><a href="#1037-在霍格沃茨找零钱-20-分" class="headerlink" title="1037 在霍格沃茨找零钱 (20 分)"></a>1037 在霍格沃茨找零钱 (20 分)</h1><p>如果你是哈利·波特迷，你会知道魔法世界有它自己的货币系统 —— 就如海格告诉哈利的：“十七个银西可(Sickle)兑一个加隆(Galleon)，二十九个纳特(Knut)兑一个西可，很容易。”现在，给定哈利应付的价钱 <em>P</em> 和他实付的钱 <em>A</em>，你的任务是写一个程序来计算他应该被找的零钱。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在 1 行中分别给出 <em>P</em> 和 <em>A</em>，格式为 <code>Galleon.Sickle.Knut</code>，其间用 1 个空格分隔。这里 <code>Galleon</code> 是 [0, 107] 区间内的整数，<code>Sickle</code> 是 [0, 17) 区间内的整数，<code>Knut</code> 是 [0, 29) 区间内的整数。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中用与输入同样的格式输出哈利应该被找的零钱。如果他没带够钱，那么输出的应该是负数。</p>
-<h3 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例 1："></a>输入样例 1：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10.16.27 14.1.28</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+        <h1 id="1069-The-Black-Hole-of-Numbers-20-分"><a href="#1069-The-Black-Hole-of-Numbers-20-分" class="headerlink" title="1069 The Black Hole of Numbers (20 分)"></a>1069 The Black Hole of Numbers (20 分)</h1><p>For any 4-digit integer except the ones with all the digits being the same, if we sort the digits in non-increasing order first, and then in non-decreasing order, a new number can be obtained by taking the second number from the first one. Repeat in this manner we will soon end up at the number <code>6174</code> – the <strong>black hole</strong> of 4-digit numbers. This number is named Kaprekar Constant.</p>
+<p>For example, start from <code>6767</code>, we’ll get:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7766 - 6677 = 1089</span><br><span class="line">9810 - 0189 = 9621</span><br><span class="line">9621 - 1269 = 8352</span><br><span class="line">8532 - 2358 = 6174</span><br><span class="line">7641 - 1467 = 6174</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例 1："></a>输出样例 1：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3.2.1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<p>Given any 4-digit number, you are supposed to illustrate the way it gets into the black hole.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case which gives a positive integer <em>N</em> in the range (0,104).</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>If all the 4 digits of <em>N</em> are the same, print in one line the equation <code>N - N = 0000</code>. Else print each step of calculation in a line until <code>6174</code> comes out as the difference. All the numbers must be printed as 4-digit numbers.</p>
+<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1:"></a>Sample Input 1:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">6767</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例 2："></a>输入样例 2：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">14.1.28 10.16.27</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1:"></a>Sample Output 1:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7766 - 6677 = 1089</span><br><span class="line">9810 - 0189 = 9621</span><br><span class="line">9621 - 1269 = 8352</span><br><span class="line">8532 - 2358 = 6174结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例 2："></a>输出样例 2：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-3.2.1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2:"></a>Sample Input 2:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2222</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int G,S,K,sum1=0,sum2=0,change;</span><br><span class="line">    scanf(&quot;%d.%d.%d&quot;,&amp;G,&amp;S,&amp;K);</span><br><span class="line">    sum1 = G*17*29 +S*29 + K;</span><br><span class="line">    int g,s,k;</span><br><span class="line">    scanf(&quot;%d.%d.%d&quot;,&amp;g,&amp;s,&amp;k);</span><br><span class="line">    sum2 = g*17*29 +s*29 + k;</span><br><span class="line">    </span><br><span class="line">    change = sum2 - sum1;</span><br><span class="line">    if(change&lt;0)&#123;</span><br><span class="line">        printf(&quot;-&quot;);</span><br><span class="line">        change= -change;</span><br><span class="line">    &#125;</span><br><span class="line">        printf(&quot;%d.%d.%d&quot;,change/29/17,change/29%17,change%29);</span><br><span class="line">  </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2:"></a>Sample Output 2:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2222 - 2222 = 0000</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">bool cmp(int a,int b)&#123;</span><br><span class="line">    return a&gt;b;</span><br><span class="line">&#125;</span><br><span class="line">int to_number(int a[])&#123;</span><br><span class="line">    int sum=0;</span><br><span class="line">    for(int i =0;i&lt;4;i++)&#123;</span><br><span class="line">        sum = sum*10 +a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    return sum;</span><br><span class="line">&#125;</span><br><span class="line">void to_array(int a[],int n)&#123;</span><br><span class="line">    for(int i=0;i&lt;4;i++)&#123;</span><br><span class="line">        a[i]=n%10;</span><br><span class="line">        n = n/10;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,min,max;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    while(1)&#123;</span><br><span class="line">        int a[4];</span><br><span class="line">        to_array(a,n);</span><br><span class="line">        sort(a,a+4);</span><br><span class="line">        min = to_number(a);</span><br><span class="line">        sort(a,a+4,cmp);</span><br><span class="line">        max=to_number(a);</span><br><span class="line">        n=max-min;</span><br><span class="line">        printf(&quot;%04d - %04d = %04d\n&quot;,max,min,max-min);</span><br><span class="line">        if(n==0||n==6174)</span><br><span class="line">            break;</span><br><span class="line">           </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -200,7 +204,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1037%20%E5%9C%A8%E9%9C%8D%E6%A0%BC%E6%B2%83%E8%8C%A8%E6%89%BE%E9%9B%B6%E9%92%B1%20(20%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1069%20The%20Black%20Hole%20of%20Numbers%20(20%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -230,17 +234,22 @@
 
 
   
-    <article id="post-1036 跟奥巴马一起编程 (15 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1067 Sort with Swap(0, i) (25 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1036-跟奥巴马一起编程-15-分"><a href="#1036-跟奥巴马一起编程-15-分" class="headerlink" title="1036 跟奥巴马一起编程 (15 分)"></a>1036 跟奥巴马一起编程 (15 分)</h1><p>美国总统奥巴马不仅呼吁所有人都学习编程，甚至以身作则编写代码，成为美国历史上首位编写计算机代码的总统。2014 年底，为庆祝“计算机科学教育周”正式启动，奥巴马编写了很简单的计算机代码：在屏幕上画一个正方形。现在你也跟他一起画吧！</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正方形边长 <em>N</em>（3≤<em>N</em>≤20）和组成正方形边的某种字符 C，间隔一个空格。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出由给定字符 C 画出的正方形。但是注意到行间距比列间距大，所以为了让结果看上去更像正方形，我们输出的行数实际上是列数的 50%（四舍五入取整）。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10 a</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+        <h1 id="1067-Sort-with-Swap-0-i-25-分"><a href="#1067-Sort-with-Swap-0-i-25-分" class="headerlink" title="1067 Sort with Swap(0, i) (25 分)"></a>1067 Sort with Swap(0, i) (25 分)</h1><p>Given any permutation of the numbers {0, 1, 2,…, <em>N</em>−1}, it is easy to sort them in increasing order. But what if <code>Swap(0, *)</code> is the ONLY operation that is allowed to use? For example, to sort {4, 0, 2, 1, 3} we may apply the swap operations in the following way:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Swap(0, 1) =&gt; &#123;4, 1, 2, 0, 3&#125;</span><br><span class="line">Swap(0, 3) =&gt; &#123;4, 1, 2, 3, 0&#125;</span><br><span class="line">Swap(0, 4) =&gt; &#123;0, 1, 2, 3, 4&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    char c;</span><br><span class="line">    scanf(&quot;%d %c&quot;,&amp;n ,&amp;c);</span><br><span class="line">    int row = n / 2 +n %2;</span><br><span class="line">    </span><br><span class="line">    for(int i=1;i&lt;=n ;i++)&#123;</span><br><span class="line">        printf(&quot;%c&quot;,c);</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line">    </span><br><span class="line">   for(int i=2;i&lt;row;i++)&#123;</span><br><span class="line">       printf(&quot;%c&quot;,c);</span><br><span class="line">       for(int j=2;j&lt;n;j++)&#123;</span><br><span class="line">           printf(&quot; &quot;);</span><br><span class="line">       &#125;</span><br><span class="line">       printf(&quot;%c\n&quot;,c);</span><br><span class="line">   &#125;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        printf(&quot;%c&quot;,c);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now you are asked to find the minimum number of swaps need to sort the given permutation of the first <em>N</em> nonnegative integers.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case, which gives a positive <em>N</em> (≤105) followed by a permutation sequence of {0, 1, …, <em>N</em>−1}. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, simply print in a line the minimum number of swaps need to sort the given permutation.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10</span><br><span class="line">3 5 7 2 6 4 9 0 8 1结尾无空行</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">9</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int pos[100010];</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,num,ans=0;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    int left = 0;</span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;num);</span><br><span class="line">        pos[num]=i;</span><br><span class="line">        if(num!=i&amp;num!=0) left++;</span><br><span class="line">    &#125;</span><br><span class="line">    int k=1;</span><br><span class="line">    while(left&gt;0)&#123;</span><br><span class="line">        if(pos[0]==0)&#123;</span><br><span class="line">            while(k&lt;n)&#123;</span><br><span class="line">                if(pos[k]!=k)&#123;</span><br><span class="line">                    swap(pos[0],pos[k]);</span><br><span class="line">                    ans++;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                k++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        while(pos[0]!=0)&#123;</span><br><span class="line">            swap(pos[0],pos[pos[0]]);</span><br><span class="line">            ans++;</span><br><span class="line">            left--;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%d&quot;,ans);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -256,7 +265,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1036%20%E8%B7%9F%E5%A5%A5%E5%B7%B4%E9%A9%AC%E4%B8%80%E8%B5%B7%E7%BC%96%E7%A8%8B%20(15%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1067%20Sort%20with%20Swap(0,%20i)%20(25%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -286,20 +295,21 @@
 
 
   
-    <article id="post-1032 挖掘机技术哪家强 (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1065 A+B and C (64bit) (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1032-挖掘机技术哪家强-20-分"><a href="#1032-挖掘机技术哪家强-20-分" class="headerlink" title="1032 挖掘机技术哪家强 (20 分)"></a>1032 挖掘机技术哪家强 (20 分)</h1><p>为了用事实说明挖掘机技术到底哪家强，PAT 组织了一场挖掘机技能大赛。现请你根据比赛结果统计出技术最强的那个学校。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第 1 行给出不超过 105 的正整数 <em>N</em>，即参赛人数。随后 <em>N</em> 行，每行给出一位参赛者的信息和成绩，包括其所代表的学校的编号（从 1 开始连续编号）、及其比赛成绩（百分制），中间以空格分隔。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中给出总得分最高的学校的编号、及其总分，中间以空格分隔。题目保证答案唯一，没有并列。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">6</span><br><span class="line">3 65</span><br><span class="line">2 80</span><br><span class="line">1 100</span><br><span class="line">2 70</span><br><span class="line">3 40</span><br><span class="line">3 0</span><br></pre></td></tr></table></figure>
+        <h1 id="1065-A-B-and-C-64bit-20-分"><a href="#1065-A-B-and-C-64bit-20-分" class="headerlink" title="1065 A+B and C (64bit) (20 分)"></a>1065 A+B and C (64bit) (20 分)</h1><p>Given three integers <em>A</em>, <em>B</em> and <em>C</em> in (−263,263), you are supposed to tell whether <em>A</em>+<em>B</em>&gt;<em>C</em>.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>The first line of the input gives the positive number of test cases, <em>T</em> (≤10). Then <em>T</em> test cases follow, each consists of a single line containing three integers <em>A</em>, <em>B</em> and <em>C</em>, separated by single spaces.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, output in one line <code>Case #X: true</code> if <em>A</em>+<em>B</em>&gt;<em>C</em>, or <code>Case #X: false</code> otherwise, where <em>X</em> is the case number (starting from 1).</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 3</span><br><span class="line">2 3 4</span><br><span class="line">9223372036854775807 -9223372036854775808 0结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2 150</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Case #1: false</span><br><span class="line">Case #2: true</span><br><span class="line">Case #3: false结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 100000</span><br><span class="line">int main()&#123;</span><br><span class="line">    int a[N],x,number,score,maxnumber,maxscore;</span><br><span class="line">    cin&gt;&gt;x;</span><br><span class="line">    for(int i=0;i&lt;x;i++)&#123;</span><br><span class="line">        scanf(&quot;%d %d&quot;,&amp;number,&amp;score);</span><br><span class="line">        a[number] += score;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    maxnumber=1;</span><br><span class="line">    maxscore=a[1];</span><br><span class="line"></span><br><span class="line">    for(int i=2;i&lt;=x;i++)&#123;</span><br><span class="line">       if(a[i]&gt;maxscore)&#123;</span><br><span class="line">            maxscore=a[i];</span><br><span class="line">            maxnumber=i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">      printf(&quot;%d %d&quot;,maxnumber,maxscore);   </span><br><span class="line">   </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int cnt;</span><br><span class="line">    cin&gt;&gt;cnt;</span><br><span class="line">    for(int i=1;i&lt;=cnt;i++)&#123;</span><br><span class="line">        long long a,b,c;</span><br><span class="line">        scanf(&quot;%lld%lld%lld&quot;,&amp;a,&amp;b,&amp;c);</span><br><span class="line">        bool flag;</span><br><span class="line">        long long res=a+b;</span><br><span class="line">        if(a &gt; 0 &amp;&amp; b &gt; 0 &amp;&amp; res &lt; 0)</span><br><span class="line">            flag = true;</span><br><span class="line">        else if(a &lt; 0 &amp;&amp; b &lt; 0 &amp;&amp; res &gt;= 0)&#123;</span><br><span class="line">            flag = false;</span><br><span class="line">        &#125;else if(res&gt;c)&#123;</span><br><span class="line">            flag = true;</span><br><span class="line">        &#125;else</span><br><span class="line">            flag = false;</span><br><span class="line">        if(flag == true)&#123;</span><br><span class="line">            printf(&quot;Case #%d: true\n&quot;,i);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            printf(&quot;Case #%d: false\n&quot;,i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>```</p>
 
       
 
@@ -314,7 +324,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1032%20%E6%8C%96%E6%8E%98%E6%9C%BA%E6%8A%80%E6%9C%AF%E5%93%AA%E5%AE%B6%E5%BC%BA%20(20%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1065%20A+B%20and%20C%20(64bit)%20(20%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -344,27 +354,19 @@
 
 
   
-    <article id="post-1031 查验身份证 (15 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1058 A+B in Hogwarts (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1031-查验身份证-15-分"><a href="#1031-查验身份证-15-分" class="headerlink" title="1031 查验身份证 (15 分)"></a>1031 查验身份证 (15 分)</h1><p>一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：</p>
-<p>首先对前17位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对11取模得到值<code>Z</code>；最后按照以下关系对应<code>Z</code>值与校验码<code>M</code>的值：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Z：0 1 2 3 4 5 6 7 8 9 10</span><br><span class="line">M：1 0 X 9 8 7 6 5 4 3 2</span><br></pre></td></tr></table></figure>
+        <h1 id="1058-A-B-in-Hogwarts-20-分"><a href="#1058-A-B-in-Hogwarts-20-分" class="headerlink" title="1058 A+B in Hogwarts (20 分)"></a>1058 A+B in Hogwarts (20 分)</h1><p>If you are a fan of Harry Potter, you would know the world of magic has its own currency system – as Hagrid explained it to Harry, “Seventeen silver Sickles to a Galleon and twenty-nine Knuts to a Sickle, it’s easy enough.” Your job is to write a program to compute <em>A</em>+<em>B</em> where <em>A</em> and <em>B</em> are given in the standard form of <code>Galleon.Sickle.Knut</code> (<code>Galleon</code> is an integer in [0,107], <code>Sickle</code> is an integer in [0, 17), and <code>Knut</code> is an integer in [0, 29)).</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case which occupies a line with <em>A</em> and <em>B</em> in the standard form, separated by one space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case you should output the sum of <em>A</em> and <em>B</em> in one line, with the same format as the input.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3.2.1 10.16.27</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<p>现在给定一些身份证号码，请你验证校验码的有效性，并输出有问题的号码。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出正整数<em>N</em>（≤100）是输入的身份证号码的个数。随后<em>N</em>行，每行给出1个18位身份证号码。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照输入的顺序每行输出1个有问题的身份证号码。这里并不检验前17位是否合理，只检查前17位是否全为数字且最后1位校验码计算准确。如果所有号码都正常，则输出<code>All passed</code>。</p>
-<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">320124198808240056</span><br><span class="line">12010X198901011234</span><br><span class="line">110108196711301866</span><br><span class="line">37070419881216001X结尾无空行</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">14.1.28</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">12010X198901011234</span><br><span class="line">110108196711301866</span><br><span class="line">37070419881216001X结尾无空行</span><br></pre></td></tr></table></figure>
-
-<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2</span><br><span class="line">320124198808240056</span><br><span class="line">110108196711301862结尾无空行</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">All passed</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">int quan[17]=&#123;7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2&#125;;</span><br><span class="line">char M[]=&#123;&#x27;1&#x27;,&#x27;0&#x27;,&#x27;X&#x27;,&#x27;9&#x27;,&#x27;8&#x27;,&#x27;7&#x27;,&#x27;6&#x27;,&#x27;5&#x27;,&#x27;4&#x27;,&#x27;3&#x27;,&#x27;2&#x27;&#125;;</span><br><span class="line"></span><br><span class="line">bool yanzheng(int a[],char str[])&#123;</span><br><span class="line">    int sum = 0;</span><br><span class="line">    for(int i=0;i&lt;17;i++)&#123;</span><br><span class="line">        sum += (str[i]-&#x27;0&#x27;)*a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    int z=sum%11;</span><br><span class="line">    if(M[z]==str[17])</span><br><span class="line">        return 1;</span><br><span class="line">    else</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br><span class="line">bool hefa(char a[])&#123;</span><br><span class="line">    int len=strlen(a);</span><br><span class="line">    for(int i=0;i&lt;len;i++)&#123;</span><br><span class="line">        if(!(a[i]&gt;=&#x27;0&#x27;&amp;&amp;a[i]&lt;=&#x27;9&#x27;))</span><br><span class="line">            return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    int sign=1;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">    	char id[18];</span><br><span class="line">        scanf(&quot;%s&quot;,id);</span><br><span class="line">        if(hefa(id)==0)&#123;</span><br><span class="line">            sign =0;</span><br><span class="line">            printf(&quot;%s&quot;,id);</span><br><span class="line">            printf(&quot;\n&quot;);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">        	if(yanzheng(quan,id)==0)&#123;</span><br><span class="line">        		sign =0;</span><br><span class="line">	            printf(&quot;%s&quot;,id);</span><br><span class="line">	            printf(&quot;\n&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(sign==1)</span><br><span class="line">        printf(&quot;All passed&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int galleon = 29*17;</span><br><span class="line">const int sickle =29;</span><br><span class="line">int main()&#123;</span><br><span class="line">    long long g1,g2,s1,k1,s2,k2,sum;</span><br><span class="line">    scanf(&quot;%lld.%lld.%lld %lld.%lld.%lld&quot;,&amp;g1,&amp;s1,&amp;k1,&amp;g2,&amp;s2,&amp;k2);</span><br><span class="line">    sum =(g1+g2)*galleon+(s1+s2)*sickle+(k1+k2);</span><br><span class="line">    printf(&quot;%d.%d.%d&quot;,sum/17/29,sum/29%17,sum%29);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -380,7 +382,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1031%20%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81%20(15%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1058%20A+B%20in%20Hogwarts%20(20%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -410,20 +412,22 @@
 
 
   
-    <article id="post-1030 完美数列 (25 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1055 The World&#39;s Richest (25 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1030-完美数列-25-分"><a href="#1030-完美数列-25-分" class="headerlink" title="1030 完美数列 (25 分)"></a>1030 完美数列 (25 分)</h1><p>给定一个正整数数列，和正整数 <em>p</em>，设这个数列中的最大值是 <em>M</em>，最小值是 <em>m</em>，如果 <em>M</em>≤<em>m**p</em>，则称这个数列是完美数列。</p>
-<p>现在给定参数 <em>p</em> 和一些正整数，请你从中选择尽可能多的数构成一个完美数列。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出两个正整数 <em>N</em> 和 <em>p</em>，其中 <em>N</em>（≤105）是输入的正整数的个数，<em>p</em>（≤109）是给定的参数。第二行给出 <em>N</em> 个正整数，每个数不超过 109。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出最多可以选择多少个数可以用它们组成一个完美数列。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10 8</span><br><span class="line">2 3 20 4 5 1 6 7 8 9结尾无空行</span><br></pre></td></tr></table></figure>
+        <h1 id="1055-The-World’s-Richest-25-分"><a href="#1055-The-World’s-Richest-25-分" class="headerlink" title="1055 The World’s Richest (25 分)"></a>1055 The World’s Richest (25 分)</h1><p>Forbes magazine publishes every year its list of billionaires based on the annual ranking of the world’s wealthiest people. Now you are supposed to simulate this job, but concentrate only on the people in a certain range of ages. That is, given the net worths of <em>N</em> people, you must find the <em>M</em> richest people in a given range of their ages.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 2 positive integers: <em>N</em> (≤105) - the total number of people, and <em>K</em> (≤103) - the number of queries. Then <em>N</em> lines follow, each contains the name (string of no more than 8 characters without space), age (integer in (0, 200]), and the net worth (integer in [−106,106]) of a person. Finally there are <em>K</em> lines of queries, each contains three positive integers: <em>M</em> (≤100) - the maximum number of outputs, and [<code>Amin</code>, <code>Amax</code>] which are the range of ages. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each query, first print in a line <code>Case #X:</code> where <code>X</code> is the query number starting from 1. Then output the <em>M</em> richest people with their ages in the range [<code>Amin</code>, <code>Amax</code>]. Each person’s information occupies a line, in the format</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Name Age Net_Worth</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<p>The outputs must be in non-increasing order of the net worths. In case there are equal worths, it must be in non-decreasing order of the ages. If both worths and ages are the same, then the output must be in non-decreasing alphabetical order of the names. It is guaranteed that there is no two persons share all the same of the three pieces of information. In case no one is found, output <code>None</code>.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">12 4</span><br><span class="line">Zoe_Bill 35 2333</span><br><span class="line">Bob_Volk 24 5888</span><br><span class="line">Anny_Cin 95 999999</span><br><span class="line">Williams 30 -22</span><br><span class="line">Cindy 76 76000</span><br><span class="line">Alice 18 88888</span><br><span class="line">Joe_Mike 32 3222</span><br><span class="line">Michael 5 300000</span><br><span class="line">Rosemary 40 5888</span><br><span class="line">Dobby 24 5888</span><br><span class="line">Billy 24 5888</span><br><span class="line">Nobody 5 0</span><br><span class="line">4 15 45</span><br><span class="line">4 30 35</span><br><span class="line">4 5 95</span><br><span class="line">1 45 50结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">int a[100010];</span><br><span class="line">using namespace std;</span><br><span class="line">int n;</span><br><span class="line">long long p;</span><br><span class="line"></span><br><span class="line">int divid(int i,long long x)&#123;</span><br><span class="line">        int mid,right,left;</span><br><span class="line">        left =i+1;</span><br><span class="line">    right = n-1;</span><br><span class="line">        if(a[n-1]&lt;=x) return n;</span><br><span class="line">        while(left&lt;right)&#123;</span><br><span class="line">            mid = (right + left)/2;</span><br><span class="line">            </span><br><span class="line">           if(a[mid]&lt;=x) left = mid +1;</span><br><span class="line">           else  right = mid;</span><br><span class="line">        &#125;</span><br><span class="line">    return left;    </span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    scanf(&quot;%d %lld&quot;,&amp;n,&amp;p);</span><br><span class="line">    for(int i=0 ;i&lt;n ;i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    int ans=0;</span><br><span class="line">    sort(a,a+n);</span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">        long long x = (long long)(a[i]*p);</span><br><span class="line">        int j = divid(i,x);</span><br><span class="line">        ans = max(ans,j-i);</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%d&quot;,ans);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Case #1:</span><br><span class="line">Alice 18 88888</span><br><span class="line">Billy 24 5888</span><br><span class="line">Bob_Volk 24 5888</span><br><span class="line">Dobby 24 5888</span><br><span class="line">Case #2:</span><br><span class="line">Joe_Mike 32 3222</span><br><span class="line">Zoe_Bill 35 2333</span><br><span class="line">Williams 30 -22</span><br><span class="line">Case #3:</span><br><span class="line">Anny_Cin 95 999999</span><br><span class="line">Michael 5 300000</span><br><span class="line">Alice 18 88888</span><br><span class="line">Cindy 76 76000</span><br><span class="line">Case #4:</span><br><span class="line">None结尾无空行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct student&#123;</span><br><span class="line">    char name[10];</span><br><span class="line">    int age,wealth;</span><br><span class="line">&#125; stu[100010];</span><br><span class="line"></span><br><span class="line">bool cmp(student a,student b)&#123;</span><br><span class="line">    if(a.wealth!=b.wealth) return a.wealth &gt; b.wealth;</span><br><span class="line">    else if(a.age != b.age) return a.age &lt; b.age;</span><br><span class="line">    else return strcmp(a.name,b.name)&lt;0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,k;</span><br><span class="line">    scanf(&quot;%d %d&quot;,&amp;n,&amp;k);</span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">        scanf(&quot;%s %d %d&quot;,stu[i].name,&amp;stu[i].age,&amp;stu[i].wealth);</span><br><span class="line">    &#125;</span><br><span class="line">    sort(stu,stu+n,cmp);</span><br><span class="line">    for(int i=1;i&lt;=k;i++)&#123;</span><br><span class="line">        int number,age1,age2;</span><br><span class="line">        scanf(&quot;%d %d %d&quot;,&amp;number,&amp;age1,&amp;age2);</span><br><span class="line">        int cnt = number;</span><br><span class="line">        printf(&quot;Case #%d:\n&quot;,i);</span><br><span class="line">        for(int j=0;j&lt;n;j++)&#123;</span><br><span class="line">            if(stu[j].age&gt;=age1&amp;&amp;stu[j].age&lt;=age2)&#123;</span><br><span class="line">                printf(&quot;%s %d %d\n&quot;,stu[j].name,stu[j].age,stu[j].wealth);</span><br><span class="line">                cnt--;</span><br><span class="line">            &#125;</span><br><span class="line">            if(cnt==0)&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        if(cnt==number)&#123;</span><br><span class="line">                printf(&quot;None\n&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -439,7 +443,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1030%20%E5%AE%8C%E7%BE%8E%E6%95%B0%E5%88%97%20(25%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1055%20The%20World's%20Richest%20(25%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -469,20 +473,19 @@
 
 
   
-    <article id="post-1028 人口普查 (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1050 String Subtraction (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1028-人口普查-20-分"><a href="#1028-人口普查-20-分" class="headerlink" title="1028 人口普查 (20 分)"></a>1028 人口普查 (20 分)</h1><p>某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。</p>
-<p>这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行给出正整数 <em>N</em>，取值在(0,105]；随后 <em>N</em> 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 <code>yyyy/mm/dd</code>（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中顺序输出有效生日的个数、最年长人和最年轻人的姓名，其间以空格分隔。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">John 2001/05/12</span><br><span class="line">Tom 1814/09/06</span><br><span class="line">Ann 2121/01/30</span><br><span class="line">James 1814/09/05</span><br><span class="line">Steve 1967/11/20结尾无空行</span><br></pre></td></tr></table></figure>
+        <h1 id="1050-String-Subtraction-20-分"><a href="#1050-String-Subtraction-20-分" class="headerlink" title="1050 String Subtraction (20 分)"></a>1050 String Subtraction (20 分)</h1><p>Given two strings <em>S</em>1 and <em>S</em>2, <em>S</em>=<em>S</em>1−<em>S</em>2 is defined to be the remaining string after taking all the characters in <em>S</em>2 from <em>S</em>1. Your task is simply to calculate <em>S</em>1−<em>S</em>2 for any given strings. However, it might not be that simple to do it <strong>fast</strong>.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. Each case consists of two lines which gives <em>S</em>1 and <em>S</em>2, respectively. The string lengths of both strings are no more than 104. It is guaranteed that all the characters are visible ASCII codes and white space, and a new line character signals the end of a string.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print <em>S</em>1−<em>S</em>2 in one line.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">They are students.</span><br><span class="line">aeiou结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3 Tom John</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Thy r stdnts.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn = 10010;</span><br><span class="line"></span><br><span class="line">struct people&#123;</span><br><span class="line">	char name[5];</span><br><span class="line">	int year;</span><br><span class="line">	int month;</span><br><span class="line">	int day;</span><br><span class="line">&#125; temp,zuo,you,young,old;</span><br><span class="line"></span><br><span class="line">bool lesss(people a,people b)&#123;</span><br><span class="line">	if(a.year!=b.year)</span><br><span class="line">		return a.year&lt;b.year;</span><br><span class="line">	else if(a.month!=b.month)</span><br><span class="line">		return a.month&lt;b.month;</span><br><span class="line">	else</span><br><span class="line">		return a.day&lt;=b.day;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bool much(people a,people b)&#123;</span><br><span class="line">	if(a.year!=b.year)</span><br><span class="line">		return a.year&gt;b.year;</span><br><span class="line">	else if(a.month!=b.month)</span><br><span class="line">		return a.month&gt;b.month;</span><br><span class="line">	else</span><br><span class="line">		return a.day&gt;=b.day;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">	young.year=zuo.year=1814;</span><br><span class="line">	young.month=zuo.month=9;</span><br><span class="line">	young.day=zuo.day=6;</span><br><span class="line">	old.year=you.year=2014;</span><br><span class="line">	old.month=you.month=9;</span><br><span class="line">	old.day=you.day=6;</span><br><span class="line">	</span><br><span class="line">	int cnt=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		scanf(&quot;%s %d/%d/%d&quot;,&amp;temp.name,&amp;temp.year,&amp;temp.month,&amp;temp.day);</span><br><span class="line">		if(lesss(temp,you)&amp;&amp;much(temp,zuo))&#123;</span><br><span class="line">			cnt++;</span><br><span class="line">			if(lesss(temp,old))</span><br><span class="line">				old = temp;</span><br><span class="line">			if(much(temp,young))</span><br><span class="line">				young = temp;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	if(cnt==0)</span><br><span class="line">		printf(&quot;0\n&quot;);</span><br><span class="line">	else</span><br><span class="line">		printf(&quot;%d %s %s\n&quot;,cnt,old.name,young.name);</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    string s1;</span><br><span class="line">    string s2;</span><br><span class="line">    getline(cin,s1);</span><br><span class="line">    getline(cin,s2);</span><br><span class="line">    int len1 = s1.length();</span><br><span class="line">    int len2 = s2.length();</span><br><span class="line">    for(int i=0;i&lt;len1;i++)&#123;</span><br><span class="line">        bool flag = true;</span><br><span class="line">        for(int j=0;j&lt;len2;j++)&#123;</span><br><span class="line">            if(s1[i]==s2[j])</span><br><span class="line">                flag = false;</span><br><span class="line">        &#125;</span><br><span class="line">        if(flag) printf(&quot;%c&quot;,s1[i]);</span><br><span class="line">        else continue;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -498,7 +501,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1028%20%E4%BA%BA%E5%8F%A3%E6%99%AE%E6%9F%A5%20(20%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1050%20String%20Subtraction%20(20%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -528,23 +531,23 @@
 
 
   
-    <article id="post-1027 打印沙漏 (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1048 Find Coins (25 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1027-打印沙漏-20-分"><a href="#1027-打印沙漏-20-分" class="headerlink" title="1027 打印沙漏 (20 分)"></a>1027 打印沙漏 (20 分)</h1><p>本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*****</span><br><span class="line"> ***</span><br><span class="line">  *</span><br><span class="line"> ***</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
+        <h1 id="1048-Find-Coins-25-分"><a href="#1048-Find-Coins-25-分" class="headerlink" title="1048 Find Coins (25 分)"></a>1048 Find Coins (25 分)</h1><p>Eva loves to collect coins from all over the universe, including some other planets like Mars. One day she visited a universal shopping mall which could accept all kinds of coins as payments. However, there was a special requirement of the payment: for each bill, she could only use exactly two coins to pay the exact amount. Since she has as many as 105 coins with her, she definitely needs your help. You are supposed to tell her, for any given amount of money, whether or not she can find two coins to pay for it.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 2 positive numbers: <em>N</em> (≤105, the total number of coins) and <em>M</em> (≤103, the amount of money Eva has to pay). The second line contains <em>N</em> face values of the coins, which are all positive numbers no more than 500. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print in one line the two face values <em>V</em>1 and <em>V</em>2 (separated by a space) such that <em>V</em>1+<em>V</em>2=<em>M</em> and <em>V</em>1≤<em>V</em>2. If such a solution is not unique, output the one with the smallest <em>V</em>1. If there is no solution, output <code>No Solution</code> instead.</p>
+<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1:"></a>Sample Input 1:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">8 15</span><br><span class="line">1 2 8 7 2 4 11 15结尾无空行</span><br></pre></td></tr></table></figure>
 
-<p>所谓“沙漏形状”，是指每行输出奇数个符号；各行符号中心对齐；相邻两行符号数差2；符号数先从大到小顺序递减到1，再从小到大顺序递增；首尾符号数相等。</p>
-<p>给定任意N个符号，不一定能正好组成一个沙漏。要求打印出的沙漏能用掉尽可能多的符号。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行给出1个正整数N（≤1000）和一个符号，中间以空格分隔。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>首先打印出由给定符号组成的最大的沙漏形状，最后在一行中输出剩下没用掉的符号数。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">19 *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1:"></a>Sample Output 1:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4 11</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*****</span><br><span class="line"> ***</span><br><span class="line">  *</span><br><span class="line"> ***</span><br><span class="line">*****</span><br><span class="line">2结尾无空行</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2:"></a>Sample Input 2:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7 14</span><br><span class="line">1 8 7 2 4 11 15结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int x;</span><br><span class="line">    char c;</span><br><span class="line">    scanf(&quot;%d %c&quot;,&amp;x,&amp;c);</span><br><span class="line">    int n=(int)sqrt((x+1)/2);</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=0;j&lt;i-1;j++)&#123;</span><br><span class="line">            printf(&quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        for(int k=(n+1-i)*2-1;k&gt;0;k--)&#123;</span><br><span class="line">            printf(&quot;%c&quot;,c);</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=2;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=n-i;j!=0;j--)&#123;</span><br><span class="line">            printf(&quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        for(int k=0;k&lt;2*i-1;k++)&#123;</span><br><span class="line">            printf(&quot;%c&quot;,c);</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    printf(&quot;%d&quot;,x-(n*n*2-1));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2:"></a>Sample Output 2:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">No Solution</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> #include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int  hashtable[1010]=&#123;0&#125;;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</span><br><span class="line">    for(int i = 0 ;i &lt; n;i++)&#123;</span><br><span class="line">        int temp;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;temp);</span><br><span class="line">        hashtable[temp]++;</span><br><span class="line">    &#125;</span><br><span class="line">    int flag = 0,k;</span><br><span class="line">    for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">        if(i==m-i&amp;&amp;hashtable[i]&gt;=2)&#123;</span><br><span class="line">             flag=1;</span><br><span class="line">            k=i;</span><br><span class="line">            break;</span><br><span class="line">        &#125;else if(hashtable[i]&gt;0&amp;&amp;hashtable[m-i]&gt;0&amp;&amp;i!=(m-i))&#123;</span><br><span class="line">            flag=1;</span><br><span class="line">            k=i;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(flag)&#123;</span><br><span class="line">        printf(&quot;%d %d&quot;,k,m-k);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        printf(&quot;No Solution&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -560,7 +563,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1027%20%E6%89%93%E5%8D%B0%E6%B2%99%E6%BC%8F%20(20%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1048%20Find%20Coins%20(25%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -590,20 +593,19 @@
 
 
   
-    <article id="post-1026 程序运行时间 (15 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1046 Shortest Distance (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1026-程序运行时间-15-分"><a href="#1026-程序运行时间-15-分" class="headerlink" title="1026 程序运行时间 (15 分)"></a>1026 程序运行时间 (15 分)</h1><p>要获得一个 C 语言程序的运行时间，常用的方法是调用头文件 time.h，其中提供了 clock() 函数，可以捕捉从程序开始运行到 clock() 被调用时所耗费的时间。这个时间单位是 clock tick，即“时钟打点”。同时还有一个常数 CLK_TCK，给出了机器时钟每秒所走的时钟打点数。于是为了获得一个函数 <em>f</em> 的运行时间，我们只要在调用 <em>f</em> 之前先调用 clock()，获得一个时钟打点数 C1；在 <em>f</em> 执行完成后再调用 clock()，获得另一个时钟打点数 C2；两次获得的时钟打点数之差 (C2-C1) 就是 <em>f</em> 运行所消耗的时钟打点数，再除以常数 CLK_TCK，就得到了以秒为单位的运行时间。</p>
-<p>这里不妨简单假设常数 CLK_TCK 为 100。现给定被测函数前后两次获得的时钟打点数，请你给出被测函数运行的时间。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中顺序给出 2 个整数 C1 和 C2。注意两次获得的时钟打点数肯定不相同，即 C1 &lt; C2，并且取值在 [0,107]。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出被测函数运行的时间。运行时间必须按照 <code>hh:mm:ss</code>（即2位的 <code>时:分:秒</code>）格式输出；不足 1 秒的时间四舍五入到秒。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">123 4577973</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+        <h1 id="1046-Shortest-Distance-20-分"><a href="#1046-Shortest-Distance-20-分" class="headerlink" title="1046 Shortest Distance (20 分)"></a>1046 Shortest Distance (20 分)</h1><p>The task is really simple: given <em>N</em> exits on a highway which forms a simple cycle, you are supposed to tell the shortest distance between any pair of exits.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains an integer <em>N</em> (in [3,105]), followed by <em>N</em> integer distances <em>D</em>1 <em>D</em>2 ⋯ <em>D**N</em>, where <em>D**i</em> is the distance between the <em>i</em>-th and the (<em>i</em>+1)-st exits, and <em>D**N</em> is between the <em>N</em>-th and the 1st exits. All the numbers in a line are separated by a space. The second line gives a positive integer <em>M</em> (≤104), with <em>M</em> lines follow, each contains a pair of exit numbers, provided that the exits are numbered from 1 to <em>N</em>. It is guaranteed that the total round trip distance is no more than 107.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print your results in <em>M</em> lines, each contains the shortest distance between the corresponding given pair of exits.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5 1 2 4 14 9</span><br><span class="line">3</span><br><span class="line">1 3</span><br><span class="line">2 5</span><br><span class="line">4 1结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">12:42:59</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">10</span><br><span class="line">7结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int c1,c2,ans;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;c1,&amp;c2);</span><br><span class="line">    ans=c2-c1;</span><br><span class="line">    ans=(int)((ans*1.0+50)/100);</span><br><span class="line">    printf(&quot;%02d:%02d:%02d&quot;,ans/3600,ans%3600/60,ans%60);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">	vector&lt;int&gt; dis(n + 1);</span><br><span class="line">	int sum=0,left,right,cnt;</span><br><span class="line">	for(int i = 1; i &lt;= n; i++)&#123;</span><br><span class="line">		int temp;</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;temp);</span><br><span class="line">		sum += temp;</span><br><span class="line">		dis[i] = sum;</span><br><span class="line">	&#125;</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;cnt); </span><br><span class="line">	for(int i = 0; i &lt; cnt; i++)&#123;</span><br><span class="line">		scanf(&quot;%d %d&quot;, &amp;left, &amp;right);</span><br><span class="line">		if(left &gt; right)</span><br><span class="line">			swap(left,right);</span><br><span class="line">		int temp = dis[right - 1]-dis[left - 1];</span><br><span class="line">		printf(&quot;%d\n&quot;,min(temp,sum - temp));</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
 
 
       
@@ -619,7 +621,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1026%20%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%20(15%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1046%20Shortest%20Distance%20(20%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -649,20 +651,23 @@
 
 
   
-    <article id="post-1023 组个最小数 (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1042 Shuffling Machine (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1023-组个最小数-20-分"><a href="#1023-组个最小数-20-分" class="headerlink" title="1023 组个最小数 (20 分)"></a>1023 组个最小数 (20 分)</h1><p>给定数字 0-9 各若干个。你可以以任意顺序排列这些数字，但必须全部使用。目标是使得最后得到的数尽可能小（注意 0 不能做首位）。例如：给定两个 0，两个 1，三个 5，一个 8，我们得到的最小的数就是 10015558。</p>
-<p>现给定数字，请编写程序输出能够组成的最小的数。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出 10 个非负整数，顺序表示我们拥有数字 0、数字 1、……数字 9 的个数。整数间用一个空格分隔。10 个数字的总个数不超过 50，且至少拥有 1 个非 0 的数字。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出能够组成的最小的数。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2 2 0 0 0 3 0 0 1 0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+        <h1 id="1042-Shuffling-Machine-20-分"><a href="#1042-Shuffling-Machine-20-分" class="headerlink" title="1042 Shuffling Machine (20 分)"></a>1042 Shuffling Machine (20 分)</h1><p>Shuffling is a procedure used to randomize a deck of playing cards. Because standard shuffling techniques are seen as weak, and in order to avoid “inside jobs” where employees collaborate with gamblers by performing inadequate shuffles, many casinos employ <strong>automatic shuffling machines</strong>. Your task is to simulate a shuffling machine.</p>
+<p>The machine shuffles a deck of 54 cards according to a given random order and repeats for a given number of times. It is assumed that the initial status of a card deck is in the following order:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">S1, S2, ..., S13, </span><br><span class="line">H1, H2, ..., H13, </span><br><span class="line">C1, C2, ..., C13, </span><br><span class="line">D1, D2, ..., D13, </span><br><span class="line">J1, J2</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10015558</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+<p>where “S” stands for “Spade”, “H” for “Heart”, “C” for “Club”, “D” for “Diamond”, and “J” for “Joker”. A given order is a permutation of distinct integers in [1, 54]. If the number at the <em>i</em>-th position is <em>j</em>, it means to move the card from position <em>i</em> to position <em>j</em>. For example, suppose we only have 5 cards: S3, H5, C1, D13 and J2. Given a shuffling order {4, 2, 5, 3, 1}, the result will be: J2, H5, D13, S3, C1. If we are to repeat the shuffling again, the result will be: C1, H5, S3, J2, D13.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains a positive integer <em>K</em> (≤20) which is the number of repeat times. Then the next line contains the given order. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print the shuffling results in one line. All the cards are separated by a space, and there must be no extra space at the end of the line.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2</span><br><span class="line">36 52 37 38 3 39 40 53 54 41 11 12 13 42 43 44 2 4 23 24 25 26 27 6 7 8 48 49 50 51 9 10 14 15 16 5 17 18 19 1 20 21 22 28 29 30 31 32 33 34 35 45 46 47结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int a[10]=&#123;0&#125;;</span><br><span class="line">    for(int i=0;i&lt;10;i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=1;i&lt;10;i++)&#123;</span><br><span class="line">        if(a[i]!=0)&#123;</span><br><span class="line">            printf(&quot;%d&quot;,i);</span><br><span class="line">            a[i]--;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=0;i&lt;10;i++)&#123;</span><br><span class="line">        while(a[i])&#123;</span><br><span class="line">            printf(&quot;%d&quot;,i);</span><br><span class="line">            a[i]--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">S7 C11 C10 C12 S1 H7 H8 H9 D8 D9 S11 S12 S13 D10 D11 D12 S3 S4 S6 S10 H1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 55</span><br><span class="line">char mp[5]=&#123;&#x27;S&#x27;,&#x27;H&#x27;,&#x27;C&#x27;,&#x27;D&#x27;,&#x27;J&#x27;&#125;;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int start[N],next[N],end[N];</span><br><span class="line">	for(int i=1;i&lt;55;i++)&#123;</span><br><span class="line">		start[i]=i;</span><br><span class="line">	&#125;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	for(int i=1;i&lt;55;i++)&#123;</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;next[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	while(n)&#123;</span><br><span class="line">		for(int i=1;i&lt;55;i++)&#123;</span><br><span class="line">			end[next[i]]=start[i];</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">		for(int i=1;i&lt;55;i++)&#123;</span><br><span class="line">			start[i]=end[i];</span><br><span class="line">		&#125;	</span><br><span class="line">		n--;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=1;i&lt;55;i++)&#123;</span><br><span class="line">        if(i&gt;1)</span><br><span class="line">            printf(&quot; &quot;);</span><br><span class="line">		start[i]--;</span><br><span class="line">		printf(&quot;%c%d&quot;,mp[start[i]/13],start[i]%13+1);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -678,7 +683,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1023%20%E7%BB%84%E4%B8%AA%E6%9C%80%E5%B0%8F%E6%95%B0%20(20%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1042%20Shuffling%20Machine%20(20%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -708,19 +713,23 @@
 
 
   
-    <article id="post-1022 D进制的A+B (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-1041 Be Unique (20 分)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1022-D进制的A-B-20-分"><a href="#1022-D进制的A-B-20-分" class="headerlink" title="1022 D进制的A+B (20 分)"></a>1022 D进制的A+B (20 分)</h1><p>输入两个非负 10 进制整数 <em>A</em> 和 <em>B</em> (≤230−1)，输出 <em>A</em>+<em>B</em> 的 <em>D</em> (1&lt;<em>D</em>≤10)进制数。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中依次给出 3 个整数 <em>A</em>、<em>B</em> 和 <em>D</em>。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出 <em>A</em>+<em>B</em> 的 <em>D</em> 进制数。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">123 456 8</span><br></pre></td></tr></table></figure>
+        <h1 id="1041-Be-Unique-20-分"><a href="#1041-Be-Unique-20-分" class="headerlink" title="1041 Be Unique (20 分)"></a>1041 Be Unique (20 分)</h1><p>Being unique is so important to people on Mars that even their lottery is designed in a unique way. The rule of winning is simple: one bets on a number chosen from [1,104]. The first one who bets on a unique number wins. For example, if there are 7 people betting on { 5 31 5 88 67 88 17 }, then the second one who bets on 31 wins.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. Each case contains a line which begins with a positive integer <em>N</em> (≤105) and then followed by <em>N</em> bets. The numbers are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print the winning number in a line. If there is no winner, print <code>None</code> instead.</p>
+<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1:"></a>Sample Input 1:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7 5 31 5 88 67 88 17</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1103</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1:"></a>Sample Output 1:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">31</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int a[30];</span><br><span class="line">int main()&#123;</span><br><span class="line">    int  A,B,sum;</span><br><span class="line">    int D,cnt=0;</span><br><span class="line">    scanf(&quot;%d %d %d&quot;,&amp;A,&amp;B,&amp;D);</span><br><span class="line">    sum = A+B;</span><br><span class="line">    do&#123;</span><br><span class="line">        a[cnt++]=sum%D;</span><br><span class="line">        sum = sum/D;</span><br><span class="line">    &#125;while(sum);</span><br><span class="line">    for(int i=cnt-1;i&gt;=0;i--)&#123;</span><br><span class="line">        printf(&quot;%d&quot;,a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2:"></a>Sample Input 2:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5 888 666 666 888 888</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2:"></a>Sample Output 2:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">None</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">结尾无空行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int number[100010]=&#123;0&#125;;</span><br><span class="line">int name[100100];</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;name[i]);</span><br><span class="line">        number[name[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    int flag = -1;</span><br><span class="line">    for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">        if(number[name[i]]==1)&#123;</span><br><span class="line">            flag = name[i];</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    if(flag==-1)printf(&quot;None&quot;);</span><br><span class="line">    else printf(&quot;%d&quot;,flag);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -736,7 +745,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/1022%20D%E8%BF%9B%E5%88%B6%E7%9A%84A+B%20(20%20%E5%88%86)/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/09/27/1041%20Be%20Unique%20(20%20%E5%88%86)/">展开全文 >></a>
         </p>
       
 
@@ -768,7 +777,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 
