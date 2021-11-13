@@ -66,7 +66,7 @@
 		</nav>
 
 		<nav>
-        总文章数 41
+        总文章数 42
     </nav>
 
 		<nav class="header-smart-menu">
@@ -155,6 +155,103 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-==，quuals and hashCode" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/06/==%EF%BC%8Cquuals%20and%20hashCode/">== 与 equals到底有什么区别？</a>
+    </h1>
+  
+
+
+
+
+        
+        <a href="/2021/07/06/==%EF%BC%8Cquuals%20and%20hashCode/" class="archive-article-date">
+  	<time datetime="2021-07-06T13:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-06</time>
+</a>
+
+<span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="与-equals-有什么区别？equals-和hashCode-又是什么关系？"><a href="#与-equals-有什么区别？equals-和hashCode-又是什么关系？" class="headerlink" title="== 与 equals()有什么区别？equals()和hashCode()又是什么关系？"></a>== 与 equals()有什么区别？equals()和hashCode()又是什么关系？</h1><h5 id="1-’-’的含义"><a href="#1-’-’的含义" class="headerlink" title="1.’==’的含义"></a>1.’==’的含义</h5><ul>
+<li>对于基本类型，’==‘比较的是值是否相等</li>
+<li>对于引用类型，’==‘比较的是堆内存地址</li>
+</ul>
+<h5 id="2-equals-方法"><a href="#2-equals-方法" class="headerlink" title="2.equals()方法"></a>2.equals()方法</h5><p>首先看一下源码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public boolean equals(Object obj) &#123;</span><br><span class="line">    return (this == obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看出equals()底层就是’==‘实现的，对于有些类则重写了<code>equals()</code>方法，例如String和Integer。</p>
+<p>String类中的<code>equals()</code>方法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> 1     public boolean equals(Object anObject) &#123;</span><br><span class="line"> 2         if (this == anObject) &#123;</span><br><span class="line"> 3             return true;</span><br><span class="line"> 4         &#125;</span><br><span class="line"> 5         if (anObject instanceof String) &#123;</span><br><span class="line"> 6             String anotherString = (String)anObject;</span><br><span class="line"> 7             int n = value.length;</span><br><span class="line"> 8             if (n == anotherString.value.length) &#123;</span><br><span class="line"> 9                 char v1[] = value;</span><br><span class="line">10                 char v2[] = anotherString.value;</span><br><span class="line">11                 int i = 0;</span><br><span class="line">12                 while (n-- != 0) &#123;</span><br><span class="line">13                     if (v1[i] != v2[i])</span><br><span class="line">14                         return false;</span><br><span class="line">15                     i++;</span><br><span class="line">16                 &#125;</span><br><span class="line">17                 return true;</span><br><span class="line">18             &#125;</span><br><span class="line">19         &#125;</span><br><span class="line">20         return false;</span><br><span class="line">21     &#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果equals的对象是String的实例，<code>equals()</code>方法首先判断了String的长度，然后将String转化为字符数组，逐个字符进行比较。</p>
+<h5 id="3-equals-和hashCode-的联系"><a href="#3-equals-和hashCode-的联系" class="headerlink" title="3.equals()和hashCode()的联系"></a>3.equals()和hashCode()的联系</h5><p>通常来说，重写<code>equals()</code>的同时也要重写<code>hashCode()</code>,这源于官方文档的说明：</p>
+<p>’‘<strong>在 Java 应用程序执行期间，在同一对象上多次调用 hashCode 方法时，必须一致地返回相同的整数，前提是对象上 equals 比较中所用的信息没有被修改。从某一应用程序的一次执行到同一应用程序的另一次执行，该整数无需保持一致。</strong>’‘</p>
+<p>以集合为例，说明为什么重写equals()的同时需要重写hashCode():</p>
+<p>当向集合中放入一个元素A时，首先会由hashCode()计算出A的哈希值，用来将A放在集合中合适的位置上，如果该位置没有元素，则将A放到该位置。如果该位置已经有元素了(也就是说集合中已经有一个和A哈希值一样的元素)，此时需要调用equls()方法来判断是不是同一个元素，如果是就没必要加入了(对于Set来说)，如果不相等说明不是相同的元素，只需将A放在一个合适到的位置即可。</p>
+
+      
+
+    
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/06/==%EF%BC%8Cquuals%20and%20hashCode/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-反射" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -346,6 +443,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">design-patern</a>
               </li>
             
             <div class="clearfix"></div>
